@@ -1,0 +1,47 @@
+.footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.brand p {
+    color: #a4b0be;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.links a {
+    color: #a4b0be;
+    transition: color var(--transition-speed);
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+.bottom {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #a4b0be;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: food-ordering-app
+    env: node
+    plan: free # Free instance types can spin down and have ephemeral disks, but it's perfect for a quick live view
+    buildCommand: npm install && npx prisma generate && npx prisma migrate deploy && node prisma/seed-new.js && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        value: file:./dev.db
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: NEXTAUTH_URL
+        value: https://food-ordering-app.onrender.com # Update this after deploy if the name changes

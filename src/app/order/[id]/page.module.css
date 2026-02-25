@@ -1,0 +1,201 @@
+.pageContainer {
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    padding: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.trackingContainer {
+    width: 100%;
+    max-width: 800px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.orderIdText {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.restaurantName {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.progressSection {
+    margin-bottom: 4rem;
+}
+
+.statusText {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.progressBarBg {
+    background: #e2e8f0;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progressBarFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #ff7e67);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+.stepsRow {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.stepIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.stepActive {
+    opacity: 1;
+}
+
+.stepDot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    transition: background 0.5s, box-shadow 0.5s;
+}
+
+.stepActive .stepDot {
+    background: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
+}
+
+.stepLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .stepLabel {
+        font-size: 0.65rem;
+    }
+}
+
+.orderDetails {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.orderDetails h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.totalPrice {
+    color: var(--primary-color);
+}
+
+.actions {
+    text-align: center;
+}
+
+.homeBtn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.homeBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+}
